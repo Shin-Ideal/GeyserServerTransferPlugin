@@ -1,0 +1,19 @@
+name: GeyserServerTransferPlugin
+version: '${project.version}'
+main: com.github.shin_ideal.geyserservertransferplugin.GeyserServerTransferPlugin
+api-version: '1.13'
+depend: [ floodgate ]
+
+commands:
+  betransfer:
+    description: Send Other Server For BE
+    aliases: [ btransfer , beserverredirect, beserverredirect ]
+    permission: GeyserServerTransferPlugin.command.betransfer
+
+permissions:
+  GeyserServerTransferPlugin.command.betransfer:
+    description: Send Other Server Command For BE
+    default: op
+  GeyserServerTransferPlugin.command.betransferforce:
+    description: Send Other Server Command (Force) For BE
+    default: op
