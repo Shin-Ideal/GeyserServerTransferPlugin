@@ -61,6 +61,6 @@ public class BeTransferCommandExecutor implements CommandExecutor {
     }
 
     private void sendHowToUse(CommandSender sender) {
-        sender.sendMessage("/geysertransfer ip port (username)");
+        sender.sendMessage("/betransfer ip port (username)");
     }
 }

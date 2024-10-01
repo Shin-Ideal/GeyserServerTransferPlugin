@@ -7,7 +7,7 @@ depend: [ floodgate ]
 commands:
   betransfer:
     description: Send Other Server For BE
-    aliases: [ btransfer , beserverredirect, beserverredirect ]
+    aliases: [ btransfer , beserverredirect, beserverredirect,geysertransfer,gtransfer ]
     permission: GeyserServerTransferPlugin.command.betransfer
 
 permissions:
