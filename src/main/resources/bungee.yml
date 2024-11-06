@@ -1,0 +1,4 @@
+name: GeyserServerTransferPlugin
+version: '${project.version}'
+main: com.github.shin_ideal.geyserservertransferplugin.bungeecord.GeyserServerTransferPluginBungeeCord
+depends: [ floodgate ]
