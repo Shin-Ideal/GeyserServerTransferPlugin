@@ -1,7 +1,6 @@
 package com.github.shin_ideal.geyserservertransferplugin.bungeecord;
 
 import com.github.shin_ideal.geyserservertransferplugin.bungeecord.Commands.BeTransferCommandBungeeCord;
-import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
 
 public class GeyserServerTransferPluginBungeeCord extends Plugin {
@@ -16,6 +15,7 @@ public class GeyserServerTransferPluginBungeeCord extends Plugin {
     public void onEnable() {
         Instance = this;
         registerCommandExecutors();
+        registerPluginChannels();
         getLogger().info("enable");
     }
 
@@ -25,6 +25,11 @@ public class GeyserServerTransferPluginBungeeCord extends Plugin {
     }
 
     private void registerCommandExecutors() {
-        ProxyServer.getInstance().getPluginManager().registerCommand(this, new BeTransferCommandBungeeCord());
+        getProxy().getPluginManager().registerCommand(this, new BeTransferCommandBungeeCord());
+    }
+
+    private void registerPluginChannels() {
+        getProxy().registerChannel("betransfer:transfer");
+        getProxy().getPluginManager().registerListener(this, new PluginMessageListenerBungeeCord());
     }
 }

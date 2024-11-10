@@ -1,8 +1,8 @@
 name: GeyserServerTransferPlugin
 version: '${project.version}'
-main: com.github.shin_ideal.geyserservertransferplugin.GeyserServerTransferPlugin
+main: com.github.shin_ideal.geyserservertransferplugin.spigot.GeyserServerTransferPlugin
 api-version: '1.13'
-depend: [ floodgate ]
+softdepend: [ floodgate ]
 
 commands:
   betransfer:

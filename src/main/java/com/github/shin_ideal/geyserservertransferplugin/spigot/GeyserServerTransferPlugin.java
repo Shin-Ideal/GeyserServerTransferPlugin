@@ -1,11 +1,12 @@
-package com.github.shin_ideal.geyserservertransferplugin;
+package com.github.shin_ideal.geyserservertransferplugin.spigot;
 
-import com.github.shin_ideal.geyserservertransferplugin.CommandExecutors.BeTransferCommandExecutor;
+import com.github.shin_ideal.geyserservertransferplugin.spigot.CommandExecutors.BeTransferCommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class GeyserServerTransferPlugin extends JavaPlugin {
 
     private static GeyserServerTransferPlugin Instance;
+    private boolean floodgateMode;
 
     public static GeyserServerTransferPlugin getInstance() {
         return Instance;
@@ -15,7 +16,9 @@ public final class GeyserServerTransferPlugin extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         Instance = this;
+        floodgateMode = getServer().getPluginManager().getPlugin("floodgate") != null;
         registerCommandExecutors();
+        registerPluginChannels();
         getLogger().info("enable");
     }
 
@@ -27,5 +30,13 @@ public final class GeyserServerTransferPlugin extends JavaPlugin {
 
     private void registerCommandExecutors() {
         getCommand("betransfer").setExecutor(new BeTransferCommandExecutor());
+    }
+
+    private void registerPluginChannels() {
+        getServer().getMessenger().registerOutgoingPluginChannel(this, "betransfer:transfer");
+    }
+
+    public boolean isFloodgateMode() {
+        return floodgateMode;
     }
 }

@@ -12,7 +12,8 @@ GeyserBedrockPlayerをコマンドで他サーバーに送信できるPlugin
 
 ## Backend Server
 BungeeCordやVelocityを使用している場合SpigotやPaperなどバックエンドサーバーにもfloodgateを入れる必要があります。<br>
-詳しくは[Geyser公式のドキュメント](https://geysermc.org/wiki/floodgate/setup/#installing-floodgate-on-servers-behind-the-proxy)をご覧ください。
+詳しくは[Geyser公式のドキュメント](https://geysermc.org/wiki/floodgate/setup/#installing-floodgate-on-servers-behind-the-proxy)をご覧ください。<br>
+2.1.0からProxy側にもこのPluginを入れることでBackend側にfloodgateを入れなくても使用できます。
 
 ## Proxy Server
 2.0.0からBungeeCord、VelocityのPluginとしても使えるようになりました。<br>
