@@ -1,6 +1,7 @@
 # GeyserServerTransferPlugin
 ![image.png](image.png)
 GeyserBedrockPlayerをコマンドで他サーバーに送信できるPlugin
+[English Description & Spigot Page is here！](https://www.spigotmc.org/resources/geyserservertransferplugin.123225/)<br>
 
 ## How to Use?
 1. `/betransfer ip port (ユーザー名)` を実行
